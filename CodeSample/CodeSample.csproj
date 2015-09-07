@@ -45,6 +45,22 @@
   <ItemGroup>
     <Compile Include="PhoneKeyboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Words\ThreeLetterWordsDictionary.cs" />
+    <Compile Include="WordToWord_01.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Words\Four-Letter Word List.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Words\Three-Letter Word List.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dotNetTree\dotNetTree.csproj">
+      <Project>{bd529c18-ef82-45b0-bb87-60f1f3ff4cf9}</Project>
+      <Name>dotNetTree</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -116,7 +116,7 @@ namespace CodeSample
         /// Test
         /// </summary>
         /// <param name="args"></param>
-        static void Main(string[] args)
+        static void Mainn(string[] args)
         {
             List<int> listNumber = new List<int>() { 2,2,7,2 };
             List<string> listWord = GetWords(listNumber);
