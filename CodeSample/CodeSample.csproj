@@ -45,7 +45,8 @@
   <ItemGroup>
     <Compile Include="PhoneKeyboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Words\ThreeLetterWordsDictionary.cs" />
+    <Compile Include="RunSample.cs" />
+    <Compile Include="Words\WordDictionary.cs" />
     <Compile Include="WordToWord_01.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using CodeSample.Words;
+
 namespace CodeSample
 {
     
@@ -17,7 +19,7 @@ namespace CodeSample
         private static Dictionary<int, List<char>> diccPhoneKeyboard;
 
         /// <summary>
-        /// Initialize diccPhoneKeyboard
+        /// Static constructor: Initialize diccPhoneKeyboard
         /// </summary>
         static PhoneKeyboard()
         {
@@ -97,17 +99,17 @@ namespace CodeSample
             }
 
             // Check possible words with a dictionary
+            WordDictionary dicc = new WordDictionary();
             while (queue.Count > 0)
             {
-                //TODO: If a diccionary is available, lookup in it!
-                //HashSet<string> hashSetDictionary = GetDictionaryWords();
-                //if (hashSetDictionary.Contains (queue.Peek()))
-                //{
-                //    listWords.Add(queue.Dequeue());
-                //}
+                string sAux = queue.Dequeue();
+                if (dicc.Contains(sAux))
+                {
+                    listWords.Add(sAux);
+                }
 
                 // Add all words generate
-                listWords.Add(queue.Dequeue());
+                // listWords.Add(queue.Dequeue());
             }
             return listWords;
         }
