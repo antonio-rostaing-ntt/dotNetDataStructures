@@ -8,7 +8,12 @@ using CodeSample.Words;
 
 namespace CodeSample
 {
-    
+
+    /// <summary>
+    /// Get a list of words given a secuence of phone keyboards numbers
+    /// Example: 2 2 3 -> ace bad cad
+    /// Example: 6 2 7 -> map mar mas nap oar
+    /// </summary>
     public class PhoneKeyboard
     {
         /// <summary>

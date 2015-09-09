@@ -10,7 +10,11 @@ using CodeSample.Words;
 namespace CodeSample
 {
     /// <summary>
-    /// Pass from a word to another word using only existing words in a dictionary
+    /// Pass from a word to another word using only existing words in a dictionary.
+    /// Only one letter can be changed from one word to another
+    /// Example: Initial word 'cat', final word 'dog'.
+    /// Solution: [5 Steps] cat bat bet get got dot dog
+    /// Best solution: [2 Steps] cat cot dot dog
     /// Recursive Bactracking Solution
     /// </summary>
     class WordToWord_01
