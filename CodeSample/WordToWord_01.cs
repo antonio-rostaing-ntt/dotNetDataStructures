@@ -11,56 +11,7 @@ namespace CodeSample
 {
     /// <summary>
     /// Pass from a word to another word using only existing words in a dictionary
-    /// 
-    /// Bactracking template: Find single solution
-    /// 
-    /// findSolutions(n, other params)
-    /// {
-    /// 
-    ///     if (found a solution) {
-    ///         displaySolution();
-    ///         return
-    ///         true
-    ///         ;
-    ///     }
-    /// 
-    ///     for (val = first to last)
-    ///     {
-    ///         if (isValid(val, n))
-    ///         {
-    ///             applyValue(val, n);
-    ///             if
-    ///             (findSolutions(n + 1, other params))
-    ///                 return true;
-    ///             removeValue(val, n);
-    ///        }
-    ///     }
-    /// 
-    ///     return false;
-    /// }
-    /// 
-    /// Bactracking template: Find all solution
-    /// 
-    /// void findSolutions(n, other params) {
-    /// 
-    ///     if (found a solution) {
-    ///         solutionsFound++;
-    ///         displaySolution();
-    ///         if (solutionsFound >= solutionTarget)
-    ///             System.exit(0);
-    ///         return;
-    ///     }  
-    ///
-    ///     for (val = first to last) {
-    ///         if (isValid(val, n)) {
-    ///             applyValue(val, n);
-    ///             findSolutions(n + 1, other params);
-    ///             removeValue(val, n);
-    ///         }
-    ///     }
-    /// 
-    /// }
-    /// 
+    /// Recursive Bactracking Solution
     /// </summary>
     class WordToWord_01
     {
@@ -143,6 +94,32 @@ namespace CodeSample
         /// <param name="lPreviousExplored"></param>
         /// <param name="lResultSecuence"></param>
         /// <returns></returns>
+        /// 
+        /// Bactracking template: Find single solution
+        /// 
+        /// findSolutions(n, other params)
+        /// {
+        /// 
+        ///     if (found a solution) {
+        ///         displaySolution();
+        ///         return true;
+        ///     }
+        /// 
+        ///     for (val = first to last)
+        ///     {
+        ///         if (isValid(val, n))
+        ///         {
+        ///             applyValue(val, n);
+        /// 
+        ///             if (findSolutions(n + 1, other params))
+        ///                 return true;
+        /// 
+        ///             removeValue(val, n);
+        ///        }
+        ///     }
+        /// 
+        ///     return false;
+        /// }
         private static bool FindSecuenceFirst (string sIni, string sEnd, WordDictionary dicc, List<string> lPreviousExplored, ref List<string> lResultSecuence)
         {
             // Validate input
@@ -202,6 +179,28 @@ namespace CodeSample
         /// <param name="dicc"></param>
         /// <param name="lPreviousExplored"></param>
         /// <param name="lStepSecuence"></param>
+        ///
+        ///  Bactracking template: Find all solution
+        /// 
+        /// void findSolutions(n, other params) {
+        /// 
+        ///     if (found a solution) {
+        ///         solutionsFound++;
+        ///         displaySolution();
+        ///         if (solutionsFound >= solutionTarget)
+        ///             System.exit(0);
+        ///         return;
+        ///     }  
+        ///
+        ///     for (val = first to last) {
+        ///         if (isValid(val, n)) {
+        ///             applyValue(val, n);
+        ///             findSolutions(n + 1, other params);
+        ///             removeValue(val, n);
+        ///         }
+        ///     }
+        /// 
+        /// }
         private static void FindSecuenceMin(string sIni, string sEnd, WordDictionary dicc, Dictionary<string, int> diccPreviousExplored, List<string> lStepSecuence, ref int iMin, ref List<string> lMinSecuence)
         {
             // Validate input
